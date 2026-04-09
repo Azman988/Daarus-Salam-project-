@@ -1,0 +1,171 @@
+:root {
+    --SS-height: 400px;
+}
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    background: var(--background-color) !important;
+    box-shadow: 0px 0px 10px var(--secondary-color);
+}
+/* Cart Items */
+.cart-items-header {
+    background: var(--background-color);
+}
+/* Customized Checkbox */
+.checkbox-div {
+    left: 3%;
+}
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark {
+    height: 18px;
+    width: 18px;
+    background: var(--secondary-color);
+    border-radius: 100%;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    box-shadow: 0 0 4px #283542;
+}
+.custom-checkbox input:checked ~ .checkmark {
+  background: var(--primary-color);
+  border-radius: 100px;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--white-color);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+@media (min-width: 768px) {
+    .cart-body {
+        max-height: calc(--SS-height);
+    }
+}
+/* Cart Summary Section */
+.cart-summary-container {
+    top: var(--header-height);
+    height: 100%;
+    background: var(--background-color);
+}
+.fee-caution {
+    background: var(--secondary-color);
+    font-size: 12px;
+}
+.fee-caution i {
+    font-size: 15px;
+}
+.subtotal-div,
+.total {
+    width: 90%;
+    border-bottom: 1px solid rgb(204, 197, 197);
+}
+.total-text {
+    font-size: 19px !important;
+    font-weight: 500;
+}
+.payment-btn {
+    width: 80%;
+    background: var(--primary-color) !important;
+    height: 40px;
+    padding: 0 5%;
+    box-shadow: 0 0 3px var(--secondary-color);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.payment-btn:hover {
+    background: var(--primary-color) !important;
+    transform: scale(1.01);
+    box-shadow: 0 0 4px var(--secondary-color);
+}
+.payment-btn:active {
+    background: var(--primary-color) !important;
+    transform: scale(0.9);
+}
+.caution-text {
+    font-size: 13px;
+}
+.payment-option h5 {
+    font-size: 18px;
+}
+.options img {
+    width: 40px !important;
+}
+/* Delivery details */
+.setup-btn {
+    cursor: pointer;
+}
+.setup-btn:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.delivery-details {
+    background: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px;
+}
+.delivery-details h6 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Delivery Form */
+.form-wrapper {
+    background: var(--background-color);
+}
+form {
+    margin: 0 5% !important;
+}
+.input-div {
+    height: 40px;
+    margin-bottom: 32px;
+    position: relative;
+}
+.input-div input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+    padding-left: 20px;
+    font-weight: 500;
+}
+.input-div input:focus {
+    border: 1px solid var(--accent-color);
+    outline: none;
+}
+.input-div label {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+.input-div input:not(:placeholder-shown)~label {
+    font-size: 14px;
+    font-weight: bold;
+    top: -8px;
+    transform: translateY(-10px) !important;
+    color: var(--primary-color);
+}
+.save-details-btn {
+    background: var(--primary-color) !important;
+    box-shadow: 0 0 4px var(--secondary-color);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.save-details-btn:hover {
+    background: var(--primary-color) !important;
+    transform: scale(1.02);
+}
