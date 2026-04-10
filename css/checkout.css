@@ -3,8 +3,8 @@
 }
 /* Dropdown Menu */
 .dropdown-menu {
-    position: absolute;
-    right: 0;
+    position: fixed !important;
+    right: 10px;
     background: var(--background-color) !important;
     box-shadow: 0px 0px 10px var(--secondary-color);
 }

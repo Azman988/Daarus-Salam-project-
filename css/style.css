@@ -11,7 +11,7 @@
 }
 html {    font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif !important; 
     scroll-behavior: smooth !important;
-    scrollbar-width: none;      
+    scrollbar-width: none !important;      
     overflow: auto !important;
 }
 /* Header Styles */
@@ -27,10 +27,14 @@ header nav,
 .logo-area {
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 .logo-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
-    height: 50px;
+    height: 40px;
     overflow: hidden;
 }
 .logo-div img {
@@ -97,6 +101,7 @@ header nav,
 .sideNav ul,
 .side-header {
     width: 90% !important;
+    background: var(--background-color) !important;
 }
 .sideNav.show {
     width: 300px;
@@ -330,6 +335,7 @@ section h1, section h3 {
     width: 100%;
     text-align: center;
     box-shadow: 0 5px 15px var(--shadow-color);
+    scroll-margin-top: var(--header-height) !important;
 }
 .wa-btn {
     background: #25D366; /* Official WhatsApp Green */
