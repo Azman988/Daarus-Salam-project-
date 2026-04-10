@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap Css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
 </head>
@@ -26,18 +28,13 @@
                     <div class="brand-name ms-1"><div class="d-block">DAARUS</div> SALAM</div>
                     </div>
                 </a>
-                <!-- Nav Links -->
+                <!-- Desktop Nav Links -->
                 <div class="d-flex align-items-stretch gap-3 ms-3">
                     <!-- Shopping Cart -->
-                    <a href="checkout.html" target="_blank" class="btn btn-outline-success fs-4 position-relative cart-btn">
+                    <a href="checkout.html" class="btn fs-4 position-relative cart-btn">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="position-absolute text-white bg-danger cart-counter">0</span>
+                        <span class="position-absolute text-white bg-danger d-flex align-items-center justify-content-center cart-counter">0</span>
                     </a>
-                    <!-- Theme switch -->
-                    <!-- <button class="btn py-1 px-2 theme-switch" id="theme-switch">
-                        <i class="f fa-moon"></i>
-                    </button> -->
-                    <!-- Mobile Menu Toggler -->
                     <button class="btn navbar-toggler">
                         <i class="fa-solid fa-list-ul"></i>
                     </button>
@@ -65,11 +62,11 @@
             </div>
             <!-- Mobile Navbar Links -->
             <div class="position-fixed top-0 end-0 d-flex flex-column align-items-center sideNav" id="sideNav">
-                <div class="d-flex align-items-center justify-content-between py-3 border-bottom border-secondary side-header">
+                <div class="sticky-top d-flex align-items-center justify-content-between py-3 border-bottom border-secondary side-header">
                     <!-- Shopping Cart -->
-                    <a href="checkout.html" target="_blank" class="btn btn-outline-secondary fs-4 position-relative cart-btn">
+                    <a href="checkout.html" class="btn btn-outline-secondary fs-4 position-relative cart-btn">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="position-absolute text-white bg-danger cart-counter">0</span>
+                        <span class="position-absolute text-white bg-danger d-flex align-items-center justify-content-center cart-counter">0</span>
                     </a>
                     <!-- Close Button -->
                     <button class="btn py-0 px-1 btn-outline-secondary fs-4 close-btn" id="close-btn">
@@ -105,8 +102,8 @@
         <section class="home-section" id="homeSection">
             <!-- Welcome page -->
             <div class="banner-content">
-                <p class="fs-2 m-0">Welcome to</p>
-                <h1 class="fw-bold">DAARUS SALAM ISLAMIC MEDICAL HOME</h1>
+                <p class="fs-2 m-0 pe-none">Welcome to</p>
+                <h1 class="fw-bold pe-none">DAARUS SALAM ISLAMIC MEDICAL HOME</h1>
                 <p class="description">
                     Home for your trusted source for medications, supplements, and prophetic medicine. 
                     We are committed to providing high-quality products and exceptional service 
@@ -119,7 +116,6 @@
             </div>
             <!-- Ads Board -->
             <div class="banner-image">
-                <!-- Use the image I generated for you here -->
                 <img src="assets/banner.jpg" alt="Natural Islamic Medicine Ingredients">
             </div>
         </section>
@@ -139,7 +135,7 @@
             </div>
             <!-- Product Grid -->
             <div class="container-fluid product-grid-container overflow-auto px-3 my-3" id="product-grid-container">
-                
+                <!-- Product cards are dynamically inserted here -->
             </div>
         </section>
         <!-- Service Section -->
@@ -148,17 +144,20 @@
             <h3 class="text-center">
                 Our Services
             </h3>
+            <!-- Section Content -->
             <div class="w-100 d-flex flex-column align-items-center justify-content-center">
+                <!-- Section Descriptions -->
                 <p class="text-center mb-3">
                     At Daarus Salam Islamic Medical Home, we provide a comprehensive range of healthcare services that integrate modern medical standards with the healing traditions of the Sunnah. Our core services are designed to address the physical, emotional, and spiritual well-being of our patients.
                 </p>
+                <!-- Service Cards -->
                 <div class="container-fluid align-items-stretch justify-content-center gap-3 service-cards">
                     <div class="card">
-                        <h6><i class="fa-solid fa-check fs-6"></i> General Clinical Care</h6>
+                        <h6><i class="fa-solid fa-check fs-6"></i> Prophetic Medicine (Tibb al-Nabawi)</h6>
                         <ul>
-                            <li><span>Primary Care Consultations:</span> Professional medical examinations and diagnosis for common ailments, delivered with a focus on patient modesty and dignity.</li>
-                            <li><span>Maternal and Pediatric Care:</span> Specialized healthcare services for mothers and children, ensuring their unique needs are met with compassion and expertise.</li>
-                            <li><span>Preventive Care:</span> Emphasis on health promotion and disease prevention through lifestyle modifications and regular screenings.</li>
+                            <li><span>Hijama (Wet Cupping Therapy):</span> A traditional Sunnah practice performed in a clinical, sterile environment to aid detoxification, improve circulation, and relieve chronic pain.</li>
+                            <li><span>Nutritional Therapy:</span> Guidance on healing through natural foods mentioned in the Quran and Hadith, such as honey, dates, and black seed (Habbat al-Sauda), to restore bodily balance.</li>
+                            <li><span>Herbal Consultation:</span> Evidence-based use of traditional herbs for various ailments, ensuring all remedies are Tayyib (pure) and Shariah-compliant.</li>
                         </ul>
                     </div>
                     <div class="card">
@@ -170,11 +169,11 @@
                         </ul>
                     </div>
                     <div class="card">
-                        <h6><i class="fa-solid fa-check fs-6"></i> Prophetic Medicine (Tibb al-Nabawi)</h6>
+                        <h6><i class="fa-solid fa-check fs-6"></i> General Clinical Care</h6>
                         <ul>
-                            <li><span>Hijama (Wet Cupping Therapy):</span> A traditional Sunnah practice performed in a clinical, sterile environment to aid detoxification, improve circulation, and relieve chronic pain.</li>
-                            <li><span>Nutritional Therapy:</span> Guidance on healing through natural foods mentioned in the Quran and Hadith, such as honey, dates, and black seed (Habbat al-Sauda), to restore bodily balance.</li>
-                            <li><span>Herbal Consultation:</span> Evidence-based use of traditional herbs for various ailments, ensuring all remedies are Tayyib (pure) and Shariah-compliant.</li>
+                            <li><span>Primary Care Consultations:</span> Professional medical examinations and diagnosis for common ailments, delivered with a focus on patient modesty and dignity.</li>
+                            <li><span>Maternal and Pediatric Care:</span> Specialized healthcare services for mothers and children, ensuring their unique needs are met with compassion and expertise.</li>
+                            <li><span>Preventive Care:</span> Emphasis on health promotion and disease prevention through lifestyle modifications and regular screenings.</li>
                         </ul>
                     </div>
                     <div class="card">
@@ -185,9 +184,10 @@
                         </ul>
                     </div>
                 </div>
+                <!-- Call to Action -->
                 <div class="w-100 text-center mt-4 mb-3">
                     <p>Book an appointment today and experience the unique blend of sunnatic medicine and Islamic values at Daarus Salam.</p>
-                    <a href="https://wa.me/2348169061143" target="_blank" class="btn btn-primary">Book an Appointment</a>
+                    <a href="https://wa.me/2348169061143" target="_blank" class="btn text-white fw-bold">Book an Appointment</a>
                 </div>
             </div>
         </section>
@@ -206,7 +206,7 @@
                 <div class="py-3 ps-3 pe-2 rounded-end-4 mission">
                     <h6>Our Mission:</h6>
                     <p>
-                        We aim is to provide high-quality, Shariah-compliant healthcare services that prioritize the sanctity of life and the dignity of the patient. We are driven by the Quranic principle that <span class="quote">"to save a life is to save all of humanity,"</span>  making every patient's recovery our primary objective.
+                        We aim to provide high-quality, Shariah-compliant healthcare services that prioritize the sanctity of life and the dignity of the patient. We are driven by the Quranic principle that <span class="quote">"to save a life is to save all of humanity,"</span> making every patient's recovery our primary objective.
                     </p>
                 </div>
                 <div class="d-flex flex-column flex-md-row gap-2">
@@ -223,17 +223,17 @@
                     <!-- Certifications -->
                     <div class="col-12 col-md-4">
                         <h6>Certifications:</h6>
-                        <p class="ps-3">
-                            Daarus Salam Islamic Medical Home is certified by the Nigerian Ministry of Health and adheres to the highest standards of medical care. We are also accredited by the Islamic Medical Association, ensuring that our services meet both clinical and religious standards. <span class="text-decoration-underline cert-link">View Certificates</span>
-                        </p>
+                        <div class="ps-3">
+                            Daarus Salam Islamic Medical Home is certified by the Nigerian Ministry of Health and adheres to the highest standards of medical care. We are also accredited by the Islamic Medical Association, ensuring that our services meet both clinical and religious standards. <span class="text-decoration-underline text-success modal-link" id="viewCertificates">View Certificates ❯</span>
+                        </div>
                     </div>
                 </div>
-                <!-- Comments and FAQ -->
+                <!-- Feedback -->
                 <div class="col-12">
-                    <h6>Comments and FAQ:</h6>
-                    <p class="ps-3">
-                        We value the feedback of our patients and encourage you to share your experiences with us. 
-                    </p>
+                    <h6>Feedback:</h6>
+                    <div class="ps-3">
+                        We value the feedback of our patients, it helps us to improve our services. Drop your feedback and review on our social media handles or click the button below to view our reviews or drop your own review. <span class="text-decoration-underline text-success modal-link" onclick="openModal('reviews')">View | Drop Reviews ❯</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -245,10 +245,13 @@
             </h3>
             <div>
                 <!-- Contact Information -->
-                <p class="fs-6">Reach Us.. If you have any questions about our products, services or policies, please do not hesitate to contact us. Our dedicated support team is here to assist you with any inquiries you may have. Feel free to drop a message in our mail for later review and response or contact Us directly for quick support, our address and easy navigation map to help you visit our office also below.</p>
-                <!-- Form and Map Container -->
-                <div class="d-flex flex-column flex-md-row align-items-stretch gap-3 justify-content-center">
-                    <div class="form-container rounded-4">
+                <p class="fs-6">
+                    For inquiries, appointments, or support, please contact us through the following channels:
+                </p>
+                <!-- Contact Content -->
+                <div class="d-flex flex-column flex-md-row align-items-stretch gap-2 justify-content-center">
+                    <!-- Contact Form -->
+                    <div class="rounded-4 form-container">
                         <h5>Send us a Message</h5>
                         <p>Have a question about our medical supplies? Reach out to Daarus Salam below.</p>
                         <form action="https://formspree.io" method="POST">
@@ -264,33 +267,44 @@
                             <button type="submit" class="submit-btn">SEND MESSAGE</button>
                         </form>
                     </div>
-                    <!-- Google Maps Section -->
-                    <div class="flex-grow-1 w-100 rounded-4 location-section">
-                        <h5 class="mb-2">Our Office address</h5>
-                        <!-- Address -->
-                        <address>Shop n<span class="text-decoration-underline">o</span> 3, </address>
-                        <h5 class="mb-2">Locate Us</h5>
-                        <!-- Map -->
-                        <div class="map-container">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.494020786777!2d3.917130273981159!3d7.410445712223481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1039937001cbdb3b%3A0xe2c2388ab4424511!2sIkolaba%20estate%20gate!5e0!3m2!1sen!2sng!4v1775594468084!5m2!1sen!2sng" 
-                                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
+                    <!-- Support & Address -->
+                    <div class="d-flex flex-column align-items-center gap-3 justify-content-center col-12 col-md-6 col-lg-7 ms-md-3 contact-address">
+                        <!-- Support Tab -->
+                        <div class="h-100 rounded-4 support" id="support">
+                            <h5>Need Fast Help?</h5>
+                            <p>Call our support line or chat with our medical staff directly on WhatsApp.</p>
+                            Call Us: <a href="tel:08078567890" class="text-decoration-none">08078567890</a> | <a href="tel:09012345678" class="text-decoration-none">09012345678</a>
+
+                            <p class="fw-bold mb-0">or</p>
+
+                            <div class="w-100 d-flex align-items-center justify-content-center">
+                                <a href="https://wa.me" class="d-flex align-items-center justify-content-center gap-2 py-2 px-3 rounded-2 text-decoration-none fw-bold mt-2 wa-btn" target="_blank">
+                                    <i class="fa-brands fa-whatsapp fs-3"></i>CHAT ON WHATSAPP
+                                </a>
+                            </div>
+                            
                         </div>
-                        <p>Work Hours: 9:00 AM - 5:00 PM - Everyday</p>
+                        <!-- Address -->
+                        <div class="rounded-4 h-100 location-section">
+                            <h5 class="mb-2">Our Office address</h5>
+                            <!-- Address -->
+                            <address>Shop 3, North East Shopping Complex, Beside Oyo State Waste & Solid Management, Agodi Gate, Ibadan, Oyo State, Nigeria</address>
+                            <h5 class="my-2">Work Hours:</h5>
+                            <p class="p-2 mb-0">9:00 AM - 5:00 PM Daily.</p>
+                        </div>           
                     </div>
                 </div>
-                
-                <!-- WhatsApp Quick Chat -->
-                <div class="w-100 d-flex align-items-center justify-content-center  mt-3" id="support">
-                    <div class="whatsapp-box rounded-4">
-                        <h5>Need Fast Help?</h5>
-                        <p>Call our support line or chat with our medical staff directly on WhatsApp.</p>
-                        Our support line: <a href="tel:08078567890" class="text-decoration-none">08078567890</a> | <a href="tel:09012345678" class="text-decoration-none">09012345678</a>
-                        <a href="https://wa.me" class="d-flex align-items-center justify-content-center gap-2 py-2 px-3 rounded-2 text-decoration-none mt-3 wa-btn" target="_blank">
-                            <i class="fa-brands fa-whatsapp fs-3"></i>CHAT ON WHATSAPP
-                        </a>
-                    </div>
+            </div>
+        </section>
+
+        <!-- Modals -->
+        <section id="modal-overlay" class="fixed-top top-0 start-0 end-0 bottom-0 modal-overlay d-none" onclick="closeModal()">
+            <div class="pe-none w-100 h-100 d-flex align-items-center justify-content-center" onclick="event.stopPropagation()">
+                <div class="position-relative col-12 col-sm-10 col-md-8 col-lg-6 rounded-4 p-4 pe-auto bg-white modal-content" id="modal-content">
+                    <!-- Close Button -->
+                    <button class="btn position-absolute top-0 end-0 fs-4 fw-bold" onclick="closeModal()">✕</button>
+                    <!-- Modal Body -->
+                    <div id="modal-body"></div>
                 </div>
             </div>
         </section>
@@ -322,9 +336,6 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="js/script.js"></script>
-
-
-    <script src="https://unpkg.com"></script>
+    <script defer type="module" src="js/script.js"></script>
 </body>
 </html>

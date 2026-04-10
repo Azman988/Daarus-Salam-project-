@@ -1,4 +1,4 @@
-* { padding: 0; margin: 0; box-sizing: border-box !important; }
+* { padding: 0; margin: 0; box-sizing: border-box !important;}
 :root {
     --header-height: 60px;
     --primary-color: #4a6748;
@@ -9,19 +9,19 @@
     --text-color: #333;
     --shadow-color: rgba(0,0,0,0.05);
 }
-html {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+html {    font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif !important; 
     scroll-behavior: smooth !important;
-    scrollbar-width: none;
+    scrollbar-width: none;      
     overflow: auto !important;
 }
-
+/* Header Styles */
 header {
     box-shadow: 0 1px 4px var(--primary-color);
 }
 header nav,
 .sideNav {
     background: var(--background-color) !important;
+    overflow-y: auto !important;
 }
 /* Logo branding */
 .logo-area {
@@ -40,7 +40,7 @@ header nav,
 }
 .brand-name {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.2rem;
     color: var(--primary-color);
 }
@@ -49,15 +49,16 @@ header nav,
     padding: 0.05rem 10px !important;
 }
 .cart-counter {
-    top: 1px;
+    top: 2px;
     right: 2px;
     font-size: 10px !important;
     padding: 2px 7px !important;
     border-radius: 50% !important;
 }
-.navbar-toggler, .theme-switch {
+.navbar-toggler {
     padding: 0.15rem 10px !important;
     border: 1px solid var(--primary-color) !important;
+    transition: background 0.4s ease;
 }
 .navbar-toggler:active, .navbar-toggler:focus, .navbar-toggler:focus-visible {
     outline: none !important;
@@ -73,8 +74,9 @@ header nav,
 .cart-btn, .close-btn {
     border: 1px solid var(--primary-color)!important;
     color: var(--primary-color)!important;
-    transition: 0.4s ease;
+    transition: background 0.4s ease;
 }
+.navbar-toggler:hover,
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active,
 .cart-btn:hover, .cart-btn:active,
@@ -206,12 +208,11 @@ section h1, section h3 {
     padding: 30px 20px;
     background: linear-gradient(
     to bottom, 
-    var(--secondary-color) 15%, var(--white-color) 100%
+    var(--secondary-color) 15%, var(--background-color) 100%
   );
 }
 .service-section h3 {
     color: var(--white-color) !important;
-    text-shadow: 1px 1px 6px var(--accent-color) !important;
 }
 .service-section > div > p {
     max-width: 90%;
@@ -226,9 +227,17 @@ section h1, section h3 {
 }
 .service-cards .card {
     padding: 15px 20px;
-    background: var(--background-color);
-    border-radius: 20px;
+    background: linear-gradient(
+        to right,
+        var(--background-color) 95%,
+        var(--white-color) 100%
+    );
+    border-radius: 25px;
     box-shadow: 0px 1px 3px var(--shadow-color);
+    transition: box-shadow 0.3s ease;
+}
+.service-cards .card:hover {
+    box-shadow: 2px 4px 15px var(--shadow-color) !important;
 }
 .service-cards i {
     color: var(--accent-color);
@@ -247,10 +256,13 @@ section h1, section h3 {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin-bottom: 5px !important;
 }
 .service-cards .card ul li {
     font-size: 15px;
+    font-weight: 450;
     color: var(--text-color);
+    margin-bottom: 7px !important;
 }
 .service-cards .card li span {
     font-size: 17px !important;
@@ -258,7 +270,7 @@ section h1, section h3 {
     color: var(--primary-color);
 }
 .service-section a {
-    background: var(--accent-color) !important;
+    background: var(--primary-color) !important;
     border: none !important;
     border-radius: 10px !important;
     transition: background 0.3s ease, transform 0.2s ease;
@@ -270,8 +282,6 @@ section h1, section h3 {
 /* About Section */
 .about-section {
     padding: 30px 20px;
-    /* background: var(--secondary-color); 
-    color: var(--white-color); */
 }
 .about-section > div > p {
     font-size: 1.05rem;
@@ -291,12 +301,12 @@ section h1, section h3 {
     margin-bottom: 0px !important;
     margin-left: 10px !important;
 }
-.quote, .cert-link {
+.quote, .modal-link {
     font-style: oblique !important;
     font-weight: bold !important;
     cursor: pointer;
 }
-.cert-link {
+.modal-link {
     font-size: 14px;
 }
 /* Contact Section */
@@ -313,11 +323,41 @@ section h1, section h3 {
     color: var(--text-color);
     margin-bottom: 20px !important;
 }
+/* WhatsApp */
+.support {
+    background: var(--white-color);
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+.wa-btn {
+    background: #25D366; /* Official WhatsApp Green */
+    color: var(--white-color);
+    width: 80% !important;
+    transition: background 0.3s ease;
+}
+.wa-btn:hover {
+    background: #1DA851;
+}
+.location-section {
+    background: var(--white-color);
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+.location-section address {
+    font-style: normal !important;
+    font-size: 1.02rem;
+    color: var(--text-color);
+}
+/* Contact Form */
 .form-container {
     max-width: 600px;
     margin: 0 auto;
     background: var(--white-color);
-    padding: 40px;
+    padding: 30px 40px;
     box-shadow: 0 4px 15px var(--shadow-color);
 }
 .form-container h5 {
@@ -329,66 +369,29 @@ section h1, section h3 {
 }
 input, textarea {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid var(--secondary-color);
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 1rem;
     outline: none;
 }
 input:focus, textarea:focus {
-    border-color: #d4af37;
+    border-color: var(--accent-color);
 }
 .submit-btn {
-    background-color: var(--secondary-color);
+    background: var(--primary-color);
     color: var(--white-color);
     border: none;
     padding: 15px 30px;
+    border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
     width: 100%;
     transition: background 0.3s;
 }
 .submit-btn:hover {
-    background-color: var(--primary-color);
+    background: var(--secondary-color);
 }
-/* Maps Styling */
-.location-section {
-    max-height: 552px;
-    padding: 40px;
-    text-align: center;
-    background: var(--white-color);
-    box-shadow: 0 4px 15px var(--shadow-color);
-}
-.location-section h5 {
-    color: var(--primary-color);
-    font-size: 1.25rem !important;
-    margin-bottom: 30px;
-}
-.map-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    border: 5px solid var(--secondary-color);
-    border-radius: 12px;
-    overflow: hidden;
-}
-/* WhatsApp */
-.whatsapp-box {
-    background: var(--white-color);
-    padding: 30px;
-    width: 100%;
-    max-width: 450px;
-    text-align: center;
-    box-shadow: 0 5px 15px var(--shadow-color);
-}
-.wa-btn {
-    background: #25D366; /* Official WhatsApp Green */
-    color: var(--white-color);
-    transition: background 0.3s ease;
-}
-.wa-btn:hover {
-    background: #1DA851;
-}
-/* Footer */
 footer {
     background: var(--primary-color) !important;
 }
@@ -408,15 +411,15 @@ footer h5 {
     background: var(--accent-color);
 }
 /* Modal Overlays */
-.modal-overlay {
+/* .modal-overlay {
     height: 100vh;
     z-index: 10000000 !important;
     backdrop-filter: blur(3px);
     background: var(--shadow-color);
     transition: opacity 0.3s ease;
-}
+} */
 /* Mobile Responsive Adjustments */
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .sideNav { display: none !important; width: 0 !important; }
 }
 @media (max-width: 768px) {
@@ -427,9 +430,74 @@ footer h5 {
         display: grid;
         grid-template-columns: 1fr;
     }
+    .contact-address div {
+        max-width: 600px !important;
+    }
 }
 @media (max-width: 580px) {
     .navbar-container {
         flex-wrap: nowrap !important;
     }
+}
+
+.modal-overlay {
+    position: fixed !important; inset: 0; background: var(--shadow-color) !important;
+    z-index: 1000; backdrop-filter: blur(4px);
+    height: 100vh;
+}
+.modal-content {
+    width: 80% !important; max-width: 600px;
+    transform: scale(0.5); opacity: 0;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+/* Trigger classes */
+.modal-overlay .modal-content { transform: scale(1); opacity: 1; }
+/* Content switch effect */
+.switching { opacity: 0; transform: translateY(10px); transition: 0.2s; }
+
+.review-module-container h4,
+.review-form-container h4 {
+    font-size: 19px !important;
+    margin-bottom: 1.6rem !important;
+    text-decoration: underline;
+}
+.reviews-content {
+    max-height: 85vh !important;
+}
+.review-text {
+    font-size: 1.02rem; font-style: oblique; font-weight: 500 !important;
+    color: var(--text-color);
+}
+.review-form {
+    width: 100%;
+    max-width: 500px;
+}.review-form button {
+    height: 40px;
+    background: var(--primary-color) !important;
+    color: var(--white-color) !important;
+    border-radius: 10px !important;
+    transition: background 0.3s ease, transform 0.2s ease;
+}.review-form button:hover {
+    background: var(--primary-color) !important;
+    transform: scale(1.02);
+}
+
+/* Star Ratings style */
+.star-rating-input {
+  display: flex;
+  flex-direction: row-reverse; /* Visually flips the 5-1 order back to 1-5 */
+  justify-content: flex-end;
+}
+.star-rating-input input { display: none; }
+.star-rating-input label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+/* Hover & Checked logic: Fills all stars to the LEFT of the pointer */
+.star-rating-input label:hover,
+.star-rating-input label:hover ~ label,
+.star-rating-input input:checked ~ label {
+  color: #ffc107;
 }

@@ -28,3 +28,13 @@ window.addEventListener('DOMContentLoaded', () => {
     dotMenu();
     updateSSHeight();
 });
+
+// Modal Handling
+window.openForm = () => {
+    const deliveryFormModal = selectId('deliveryFormModal');
+    deliveryFormModal.classList.remove('d-none');
+};
+window.closeForm = () => {
+    const deliveryFormModal = selectId('deliveryFormModal');
+    deliveryFormModal.classList.add('d-none');
+};
